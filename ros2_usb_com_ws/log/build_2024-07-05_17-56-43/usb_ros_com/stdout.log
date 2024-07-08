@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/usb_ros_com/usb_ros_com.egg-info
+writing ../../build/usb_ros_com/usb_ros_com.egg-info/PKG-INFO
+writing dependency_links to ../../build/usb_ros_com/usb_ros_com.egg-info/dependency_links.txt
+writing entry points to ../../build/usb_ros_com/usb_ros_com.egg-info/entry_points.txt
+writing requirements to ../../build/usb_ros_com/usb_ros_com.egg-info/requires.txt
+writing top-level names to ../../build/usb_ros_com/usb_ros_com.egg-info/top_level.txt
+writing manifest file '../../build/usb_ros_com/usb_ros_com.egg-info/SOURCES.txt'
+reading manifest file '../../build/usb_ros_com/usb_ros_com.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/usb_ros_com/usb_ros_com.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build
+creating /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib
+creating /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com
+copying usb_ros_com/usb.py -> /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com
+copying usb_ros_com/__init__.py -> /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com
+running install
+running install_lib
+creating /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com
+copying /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com/usb.py -> /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com
+copying /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com/__init__.py -> /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com
+byte-compiling /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com/usb.py to usb.cpython-310.pyc
+byte-compiling /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/share/ament_index
+creating /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/share/ament_index/resource_index
+creating /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/share/ament_index/resource_index/packages
+copying resource/usb_ros_com -> /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/share/ament_index/resource_index/packages
+copying package.xml -> /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/share/usb_ros_com
+running install_egg_info
+Copying ../../build/usb_ros_com/usb_ros_com.egg-info to /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com-0.0.0-py3.10.egg-info
+running install_scripts
+Installing usb script to /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/usb_ros_com
+writing list of installed files to '/home/yusuf/ros2_usb_com_ws/build/usb_ros_com/install.log'

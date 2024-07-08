@@ -1,0 +1,3 @@
+[console_scripts]
+usb = usb_ros_com.usb:main
+

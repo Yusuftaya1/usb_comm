@@ -1,0 +1,5 @@
+  File "/home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com/usb.py", line 23
+    data_str = f"linear: {msg.linear.x}, {msg.linear.y}, {msg.angular.z},{"direction"}\n"
+                                                                           ^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
