@@ -1,0 +1,28 @@
+[1.530s] Invoking command in '/home/yusuf/ros2_usb_com_ws/src/usb_ros_com': PYTHONPATH=/home/yusuf/ros2_usb_com_ws/build/usb_ros_com/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/usb_ros_com build --build-base /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build install --record /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/install.log --single-version-externally-managed install_data
+[2.088s] running egg_info
+[2.090s] writing ../../build/usb_ros_com/usb_ros_com.egg-info/PKG-INFO
+[2.090s] writing dependency_links to ../../build/usb_ros_com/usb_ros_com.egg-info/dependency_links.txt
+[2.091s] writing entry points to ../../build/usb_ros_com/usb_ros_com.egg-info/entry_points.txt
+[2.091s] writing requirements to ../../build/usb_ros_com/usb_ros_com.egg-info/requires.txt
+[2.091s] writing top-level names to ../../build/usb_ros_com/usb_ros_com.egg-info/top_level.txt
+[2.094s] reading manifest file '../../build/usb_ros_com/usb_ros_com.egg-info/SOURCES.txt'
+[2.100s] adding license file 'LICENSE'
+[2.102s] writing manifest file '../../build/usb_ros_com/usb_ros_com.egg-info/SOURCES.txt'
+[2.102s] running build
+[2.102s] running build_py
+[2.102s] copying usb_ros_com/usb2.py -> /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com
+[2.103s] copying usb_ros_com/usb.py -> /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com
+[2.103s] running install
+[2.103s] running install_lib
+[2.105s] copying /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com/usb2.py -> /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com
+[2.105s] copying /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build/lib/usb_ros_com/usb.py -> /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com
+[2.106s] byte-compiling /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com/usb2.py to usb2.cpython-310.pyc
+[2.107s] byte-compiling /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com/usb.py to usb.cpython-310.pyc
+[2.109s] running install_data
+[2.109s] running install_egg_info
+[2.114s] removing '/home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com-0.0.0-py3.10.egg-info' (and everything under it)
+[2.115s] Copying ../../build/usb_ros_com/usb_ros_com.egg-info to /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages/usb_ros_com-0.0.0-py3.10.egg-info
+[2.117s] running install_scripts
+[2.161s] Installing usb script to /home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/usb_ros_com
+[2.162s] writing list of installed files to '/home/yusuf/ros2_usb_com_ws/build/usb_ros_com/install.log'
+[2.211s] Invoked command in '/home/yusuf/ros2_usb_com_ws/src/usb_ros_com' returned '0': PYTHONPATH=/home/yusuf/ros2_usb_com_ws/build/usb_ros_com/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yusuf/ros2_usb_com_ws/install/usb_ros_com/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/usb_ros_com build --build-base /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/build install --record /home/yusuf/ros2_usb_com_ws/build/usb_ros_com/install.log --single-version-externally-managed install_data

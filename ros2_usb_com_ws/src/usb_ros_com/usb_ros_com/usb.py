@@ -3,47 +3,41 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 import serial
 
-class CmdVelToSerial(Node):
+class DifferentialDriveController(Node):
     def __init__(self):
-        super().__init__('cmd_vel_to_serial')
-        self.subscription = self.create_subscription(
+        super().__init__('differential_drive_controller')
+        self.serial_port = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+        self.wheel_separation = 0.5
+        self.wheel_radius     = 0.1
+        self.subscription     = self.create_subscription(
             Twist,
             'cmd_vel',
-            self.listener_callback,
+            self.cmd_vel_callback,
             10)
-        #self.serial_port = serial.Serial('/dev/ttyUSB0', 9600, timeout=1) ### PORT AÇMA
-        self.get_logger().info('Seri port açıldı')
-        self.wheel_distance = 0.5
 
-    def listener_callback(self, msg):
-        # Mesajdaki değerlerin sınırlanması
-        if msg.linear.x  >  1000 : msg.linear.x =  1000.0
-        if msg.linear.x  < -1000 : msg.linear.x = -1000.0
-        if msg.linear.y  >  1000 : msg.linear.y =  1000.0
-        if msg.linear.y  < -1000 : msg.linear.y = -1000.0
-        if msg.angular.z <  0    : msg.linear.x*= -1
+    def cmd_vel_callback(self, msg):
+        linear_velocity      = msg.linear.x
+        angular_velocity     = msg.angular.z
+        right_wheel_velocity = (linear_velocity)+ (angular_velocity * self.wheel_separation / 2)
+        left_wheel_velocity  = (linear_velocity)- (angular_velocity * self.wheel_separation / 2)
+        self.send_wheel_velocities(right_wheel_velocity, left_wheel_velocity)
 
-        # Diferansiyel sürüş hesaplamaları
-        v = msg.linear.x
-        w = msg.angular.z
-        d = self.wheel_distance
-        v_left = v - (d / 2) * w
-        v_right = v + (d / 2) * w
+    def send_wheel_velocities(self, right_wheel_velocity, left_wheel_velocity):
+        right_wheel_velocity = max(min(right_wheel_velocity, 1000), -1000)
+        left_wheel_velocity = max(min(left_wheel_velocity, 1000), -1000)
 
-        data_dict = {"v_left": v_left,"v_right": v_right}
-        data_list =[v_left,v_right]
-        data_str = f"left: {v_left}, right: {v_right}\n"
+        right_wheel_velocity_str = f'{int(right_wheel_velocity):05}'
+        left_wheel_velocity_str = f'{int(left_wheel_velocity):05}'
 
-        self.get_logger().info(f'Seri porta gönderilen veri: {data_list}')
-
-        #self.serial_port.write(data_str.encode()) ## PORTA YAZMA
-        
+        command = f'{right_wheel_velocity_str},{left_wheel_velocity_str}\n'
+        self.get_logger().info(f'Seri porta gönderilen veri: {right_wheel_velocity_str},{left_wheel_velocity_str}\n')
+        self.serial_port.write(command.encode())
 
 def main(args=None):
     rclpy.init(args=args)
-    node = CmdVelToSerial()
-    rclpy.spin(node)
-    node.destroy_node()
+    differential_drive_controller = DifferentialDriveController()
+    rclpy.spin(differential_drive_controller)
+    differential_drive_controller.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
