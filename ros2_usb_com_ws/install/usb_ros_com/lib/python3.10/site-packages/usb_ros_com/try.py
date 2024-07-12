@@ -19,8 +19,6 @@ for i in range(1000, -1, -10):
     print(f"Sent: {data_str.strip()}")
     time.sleep(0.5)
 
-# İkinci aşama: [-1, -1] -> [-1000, -1000]
-for i in range(-1, -1001,-10):
     data = [i, i]
     data_str = ','.join(map(str, data)) + '\n'
     ser.write(data_str.encode())

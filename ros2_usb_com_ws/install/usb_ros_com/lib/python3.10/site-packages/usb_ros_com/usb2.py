@@ -36,7 +36,7 @@ class CmdVelToSerial(Node):
         v = msg.linear.x
         w = msg.angular.z
         d = self.wheel_distance
-        v_left = v - (d / 2) * w
+        v_left  = v - (d / 2) * w
         v_right = v + (d / 2) * w
 
         data_dict = {
