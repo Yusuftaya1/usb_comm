@@ -1,2 +1,2 @@
 Serial Communicaion 
-write ros2 datas to uss port 
+write ros2 datas to usb port 
